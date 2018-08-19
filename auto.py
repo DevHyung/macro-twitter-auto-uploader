@@ -6,7 +6,7 @@ def valid_user():
     # 20180730 10:03기준 6시간
     print(time.time())
     now = 1534658874.3394372
-    terminTime = now + 60 * 60 * 3
+    terminTime = now + 60 * 60 * 24
     print("체험판 만료기간 : ", time.ctime(terminTime))
     if time.time() > terminTime:
         print('만료되었습니다.')
@@ -17,7 +17,7 @@ config = ConfigParser()
 config.read('CONFIG.ini',encoding='utf8')  # INI 읽어오기
 ID = config.get('USER', 'ID')
 PW = config.get('USER', 'PW')
-TW_CONTENT = config.get('TWEET', 'CONTENT')
+TW_CONTENT = open(config.get('TWEET', 'CONTENTFILE'),'r').read()
 TW_PIC = config.get('TWEET', 'PIC')
 TW_TIMELIST = config.get('TWEET', 'TIMELSIT').split(',')
 # ===============
