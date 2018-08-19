@@ -40,7 +40,6 @@ time.sleep(5)
 # upload
 idx = 0
 while True:
-    #try:
     valid_user()
     driver.find_element_by_xpath('//*[@id="global-new-tweet-button"]').click()
     time.sleep(2)
@@ -65,6 +64,3 @@ while True:
     idx += 1
     if len(TW_TIMELIST) <= idx:
         idx = 0
-    #except:
-    #driver.quit()
-    #break
