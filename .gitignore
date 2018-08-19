@@ -1,0 +1,11 @@
+.idea/
+__*
+chromedriver.exe
+CONFIG*
+*.jpg
+*.ini
+*.ico
+*.spec
+build/
+dist/
+
